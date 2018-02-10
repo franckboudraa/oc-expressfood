@@ -43,7 +43,7 @@ CREATE TABLE `addresses` (
 
 LOCK TABLES `addresses` WRITE;
 /*!40000 ALTER TABLE `addresses` DISABLE KEYS */;
-INSERT INTO `addresses` VALUES (1,1,'12','Avenue des Champs Elysées','75008','Paris','France','Porte 4'),(2,2,'12','Avenue des Champs Elysées','75008','Paris','France','Porte 5'),(3,3,'1600','Pennsylvania Avenue','DC 20500','Washington','USA','\"President\"'),(4,6,NULL,'PO Box 57593','CA 91403','Sherman Oaks','USA',NULL),(5,1,'255','Rue de Rivoli','75001','Paris','France','At work');
+INSERT INTO `addresses` VALUES (1,1,'12','Avenue des Champs Elysées','75008','Paris','France','Porte 4'),(2,2,'12','Avenue des Champs Elysées','75008','Paris','France','Porte 5'),(3,3,'','Disneyland','77777','Marne-la-Vallée','France','With Minnie'),(4,6,NULL,'PO Box 57593','CA 91403','Sherman Oaks','USA',NULL),(5,1,'255','Rue de Rivoli','75001','Paris','France','At work');
 /*!40000 ALTER TABLE `addresses` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -188,7 +188,7 @@ CREATE TABLE `users` (
 
 LOCK TABLES `users` WRITE;
 /*!40000 ALTER TABLE `users` DISABLE KEYS */;
-INSERT INTO `users` VALUES (1,'Doe','John','john@doe.com','9f86d081884c7d659a2feaa0c55ad015a3bf4f1b2b0b8','2018-02-10 11:22:42','2018-02-10 13:26:55',1,0),(2,'Doe','Samantha','samantha@doe.com','822e54d37dd37d83776ed8aac05e4578e8b201d8f3fa3','2018-02-10 12:57:43','2018-02-10 13:27:44',1,1),(3,'Trump','Donald','donald@trump.com','88f5d02acac33b8f2d1194d74431a4008f8472ae2a26d','2018-02-10 14:01:42','2018-02-10 14:00:37',1,0),(6,'Carrey','Jim','jim@carrey.com','8753ffee04e324893732bcc15ad05f4a936fe688e1f70','2018-02-10 13:38:54','2018-02-10 14:00:37',1,1);
+INSERT INTO `users` VALUES (1,'Doe','John','john@doe.com','9f86d081884c7d659a2feaa0c55ad015a3bf4f1b2b0b8','2018-02-10 11:22:42','2018-02-10 13:26:55',1,0),(2,'Doe','Samantha','samantha@doe.com','822e54d37dd37d83776ed8aac05e4578e8b201d8f3fa3','2018-02-10 12:57:43','2018-02-10 13:27:44',1,1),(3,'Mouse','Mickey','mickey@mouse.com','88f5d02acac33b8f2d1194d74431a4008f8472ae2a26d','2018-02-10 14:01:42','2018-02-10 15:18:48',1,0),(6,'Carrey','Jim','jim@carrey.com','8753ffee04e324893732bcc15ad05f4a936fe688e1f70','2018-02-10 13:38:54','2018-02-10 14:00:37',1,1);
 /*!40000 ALTER TABLE `users` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -201,4 +201,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2018-02-10 15:25:53
+-- Dump completed on 2018-02-10 16:22:02
