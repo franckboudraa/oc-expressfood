@@ -86,6 +86,7 @@ CREATE TABLE `order_items` (
   `order_id` int(11) unsigned NOT NULL,
   `dish_id` int(11) unsigned NOT NULL,
   `qty` int(11) unsigned NOT NULL,
+  `price` int(11) unsigned DEFAULT NULL,
   KEY `dish_id_idx` (`dish_id`),
   KEY `order_id_idx` (`order_id`),
   CONSTRAINT `dish_id` FOREIGN KEY (`dish_id`) REFERENCES `dishes` (`id`) ON DELETE CASCADE ON UPDATE NO ACTION,
@@ -99,7 +100,7 @@ CREATE TABLE `order_items` (
 
 LOCK TABLES `order_items` WRITE;
 /*!40000 ALTER TABLE `order_items` DISABLE KEYS */;
-INSERT INTO `order_items` VALUES (1,2,2),(1,3,2),(2,1,1),(2,4,1),(3,1,2);
+INSERT INTO `order_items` VALUES (1,2,2,10),(1,3,2,6),(2,1,1,7),(2,4,1,5),(3,1,2,7);
 /*!40000 ALTER TABLE `order_items` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -137,13 +138,13 @@ INSERT INTO `orders` VALUES (1,1,2,'2018-02-09 13:30:40','2018-02-10 14:13:13','
 UNLOCK TABLES;
 
 --
--- Table structure for table `rider`
+-- Table structure for table `riders`
 --
 
-DROP TABLE IF EXISTS `rider`;
+DROP TABLE IF EXISTS `riders`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `rider` (
+CREATE TABLE `riders` (
   `user_id` int(11) NOT NULL,
   `vehicle_type` enum('bike','roller') COLLATE utf8mb4_unicode_ci DEFAULT 'bike',
   KEY `index1` (`user_id`),
@@ -152,13 +153,13 @@ CREATE TABLE `rider` (
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `rider`
+-- Dumping data for table `riders`
 --
 
-LOCK TABLES `rider` WRITE;
-/*!40000 ALTER TABLE `rider` DISABLE KEYS */;
-INSERT INTO `rider` VALUES (2,'bike'),(6,'roller');
-/*!40000 ALTER TABLE `rider` ENABLE KEYS */;
+LOCK TABLES `riders` WRITE;
+/*!40000 ALTER TABLE `riders` DISABLE KEYS */;
+INSERT INTO `riders` VALUES (2,'bike'),(6,'roller');
+/*!40000 ALTER TABLE `riders` ENABLE KEYS */;
 UNLOCK TABLES;
 
 --
@@ -201,4 +202,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2018-02-10 16:22:02
+-- Dump completed on 2018-02-17 16:12:45
